@@ -16,6 +16,7 @@ class HomePageViewModel @Inject constructor(private val timeProvider: TimeProvid
     val ans: StateFlow<Int> = _x.asStateFlow()
 
     fun inc(){
+        val ts = timeProvider.now()
         _x.update { it+1 }
     }
 
